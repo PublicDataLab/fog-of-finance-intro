@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An introduction to the Fog of Finance</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://unpkg.com/enter-view@2.0.0/enter-view.min.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header__background"></div>
+        <div class="header__section">
+            <div class="header__title">
+                <h1>Fog of Finance</h1>
+                <h2>The Atlas of Offshore Foreign Direct Investment</h2>
+            </div>
+        </div>
+        <div class="header__section">
+            <div class="header__text">
+                <p><em>FDI – Foreign Direct Investment</em> consists of controlling investments by companies and
+                    individuals that cross international borders.</p>
+                <p>It is the investments that multinational corporations use to own the different pieces of themselves
+                    in different countries.</p>
+            </div>
+        </div>
+        <div class="header__section">
+            <div class="header__text">
+                <p>FDI consists largely of paper shell companies used for tax avoidance and other purposes.</p>
+                <p>Data from the International Monetary Found (IMF) show that the <em>offshore FDI</em> component may be
+                    larger than the FDI that is not linked to or distorted by offshore structures. As of 2016, two
+                    thirds of all worldwide FDI recorded by the IMF was either in or from "offshore" jurisdictions.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="flows__container">
+            <h3>How do they work?</h3>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 756.62 404">
+                <defs>
+                    <linearGradient id="gradient-direct" x1="0%" y1="0%" x2="100%" y2="0%"
+                        gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#00adff" />
+                        <stop offset="0.33" stop-color="#99ff66" />
+                        <stop offset="0.66" stop-color="#99ff66" />
+                        <stop offset="1" stop-color="#00adff" />
+                        <animate attributeName="x1" values="0%;100%" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="x2" values="100%;200%" dur="3s" repeatCount="indefinite" />
+                    </linearGradient>
+                    <linearGradient id="gradient-conduit-forward" x1="0%" y1="0%" x2="100%" y2="0%"
+                        gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#c300ff" />
+                        <stop offset="0.33" stop-color="#f7931e" />
+                        <stop offset="0.66" stop-color="#f7931e" />
+                        <stop offset="1" stop-color="#c300ff" />
+                        <animate attributeName="x1" values="0%;100%" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="x2" values="100%;200%" dur="3s" repeatCount="indefinite" />
+                    </linearGradient>
+                    <linearGradient id="gradient-conduit-backward" x1="0%" y1="0%" x2="100%" y2="0%"
+                        gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#c300ff" />
+                        <stop offset="0.33" stop-color="#f7931e" />
+                        <stop offset="0.66" stop-color="#f7931e" />
+                        <stop offset="1" stop-color="#c300ff" />
+                        <animate attributeName="x1" values="0%;-100%" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="x2" values="100%;0%" dur="3s" repeatCount="indefinite" />
+                    </linearGradient>
+                    <filter id="blur" x="-25%" y="-25%" width="150%" height="150%">
+                        <feGaussianBlur stdDeviation="3" />
+                    </filter>
+                </defs>
+                <g class="links">
+                    <path class="path1 direct step2" d="M191.43 51.68C426 51.68 426 162.32 660.57 162.32" />
+                    <path class="path2 direct step3" d="M191.66 41.68c234.57 0 234.57 110.63 469.14 110.63" />
+                    <path class="path3 conduit--forward step3" d="M191.66 71.68c117.29 0 117.29 221.27 234.57 221.27" />
+                    <path class="path4 conduit--forward step3"
+                        d="M426.23 292.95c117.29 0 117.29-110.63 234.57-110.63" />
+                    <path class="path5 conduit--forward step3" d="M426.23 307.95c58.64 0 58.64 30.63 117.29 30.63" />
+                    <path class="path6 conduit--forward step3" d="M543.51 343.58c58.64 0 58.64-141.27 117.29-141.27" />
+                    <path class="path7 conduit--backward step4"
+                        d="M426.23 307.95c-5.52 0-10 4.48-10 10v50.63c0 5.52 4.48 10 10 10H660.8v0c11.05 0 20-8.95 20-20V237.32c0-11.05-8.95-20-20-20" />
+                    <path class="path8 conduit--backward step4"
+                        d="M543.51 348.58c-5.52 0-10 4.48-10 10 0 5.52 4.48 10 10 10H660.8c5.52 0 10-4.48 10-10V237.32c0-5.52-4.48-10-10-10" />
+                </g>
+                <g class="links-top">
+                    <path class="direct" style="stroke-width: 35;"
+                        d="M190.66 41.68c234.57 0 234.57 110.63 469.14 110.63" />
+                    <path class="conduit--forward" style="stroke-width: 10;"
+                        d="M191.66 71.68c117.29 0 117.29 221.27 234.57 221.27" />
+                    <path class="conduit--forward" style="stroke-width: 5;"
+                        d="M426.23 307.95c58.64 0 58.64 30.63 117.29 30.63" />
+                    <path class="conduit--forward" style="stroke-width: 10;"
+                        d="M426.23 292.95c117.29 0 117.29-110.63 234.57-110.63" />
+                    <path class="conduit--forward" style="stroke-width: 15;"
+                        d="M543.51 343.58c58.64 0 58.64-141.27 117.29-141.27" />
+                    <path class="conduit--backward" style="stroke-width: 5;"
+                        d="M543.51 348.58c-5.52 0-10 4.48-10 10 0 5.52 4.48 10 10 10H660.8c5.52 0 10-4.48 10-10V237.32c0-5.52-4.48-10-10-10" />
+                    <path class="conduit--backward" style="stroke-width: 5;"
+                        d="M426.23 307.95c-5.52 0-10 4.48-10 10v50.63c0 5.52 4.48 10 10 10H660.8v0c11.05 0 20-8.95 20-20V237.32c0-11.05-8.95-20-20-20" />
+                </g>
+                <g class="nodes">
+                    <line class="step1" x1="191.66" y1="21.68" x2="191.66" y2="81.68"></line>
+                    <line class="step2" x1="660.8" y1="132.32" x2="660.8" y2="192.32" data-middley2="192.32"
+                        data-finaly2="212.32"></line>
+                    <line class="step3" x1="426.23" y1="282.95" x2="426.23" y2="312.95"></line>
+                    <line class="step3" x1="543.51" y1="333.58" x2="543.51" y2="353.58"></line>
+                    <line class="flow--return step4" x1="660.8" y1="212.32" x2="660.8" y2="232.32"></line>
+                    <text transform="matrix(1 0 0 1 170.407 11.6832)" class="step1">
+                        origin
+                    </text>
+                    <text transform="matrix(1 0 0 1 620.7258 122.316)" class="step2">
+                        destination
+                    </text>
+                    <text transform="matrix(1 0 0 1 399.0183 272.9491)" class="step3">
+                        conduit
+                    </text>
+                    <text transform="matrix(1 0 0 1 516.3035 323.5831)" class="step3">
+                        conduit
+                    </text>
+                </g>
+            </svg>
+            <div class="flows__text step1">
+                <p>There is always an <em>origin</em> country from which money starts to move<span class="step2">
+                        towards a final
+                        country of <em>destination</em>.</span></p>
+            </div>
+            <div class="flows__text step3">
+                <p>It's not always so straightforward though. Money could pass through one or more <em>conduit</em>
+                    countries before arriving to the final <em>destination</em>.</p>
+            </div>
+            <div class="flows__text step4">
+                <p>Money could also take a round trip, going from the <em>destination</em> to a <em>conduit</em> and
+                    back to the <em>destination</em>. This kind of investements are called inversions.</p>
+            </div>
+            <div class="flows__text step5">
+                <p>Each flow of money between countries has also a certain degree of <span class="blurred"> uncertainty
+                    </span> that depends on how much confidence there is in the estimates.</p>
+            </div>
+        </div>
+        <div class="flows__marker" id="step1"></div>
+        <div class="flows__marker" id="step2"></div>
+        <div class="flows__marker" id="step3"></div>
+        <div class="flows__marker" id="step4"></div>
+        <div class="flows__marker" id="step5"></div>
+    </main>
+    <section>
+
+    </section>
+</body>
+
+</html>

@@ -5,15 +5,15 @@
     let flowObserver = enterView({
         selector: '.flows__marker',
         enter: function (el) {
-            animateStep(el.id, true);
+            animateFlow(el.id.replace('flow', 'step'), true);
         },
         exit: function (el) {
-            animateStep(el.id, false);
+            animateFlow(el.id.replace('flow', 'step'), false);
         },
         offset: 0
     });
 
-    function animateStep(step, isEntering) {
+    function animateFlow(step, isEntering) {
         // console.log(isEntering ? 'entered ' : 'exited ', step);
         let stepNumber = isEntering ? +step.substring(step.length - 1) : +step.substring(step.length - 1) - 1;
         let $svgLine, $oldAnimationEl, lineStart, lineEnd;
@@ -21,18 +21,18 @@
         // Special case for text of step 2
         if (stepNumber === 2) {
             if (isEntering) {
-                document.querySelector(`span.step2`).classList.add('shown');
+                document.querySelector(`.flows__text span.step2`).classList.add('shown');
             } else {
                 $flowTexts.forEach(function (el) { el.classList.remove('shown') });
                 document.querySelector(`.flows__text.step1`).classList.add('shown');
-                document.querySelector(`span.step2`).classList.add('shown');
+                document.querySelector(`.flows__text span.step2`).classList.add('shown');
             }
         } else {
             if (!isEntering && stepNumber === 1) {
-                document.querySelector(`span.step2`).classList.remove('shown');
+                document.querySelector(`.flows__text span.step2`).classList.remove('shown');
             } else {
                 $flowTexts.forEach(function (el) { el.classList.remove('shown') });
-                document.querySelector(`span.step2`).classList.remove('shown');
+                document.querySelector(`.flows__text span.step2`).classList.remove('shown');
                 // Show a new step only in you are not scrolling back to the begignning beyond the very first step
                 if (stepNumber !== 0) {
                     document.querySelector(`.flows__text.step${stepNumber}`).classList.add('shown');
@@ -46,7 +46,7 @@
                 break;
 
             case 'step2':
-                animateSvg(step, isEntering)
+                animateSvg(step, isEntering);
                 break;
 
             case 'step3':

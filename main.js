@@ -6,7 +6,7 @@
     const viewportHeight = window.innerHeight;
     const scrollDistance = viewportHeight * 0.75;
 
-    // scrollIt(scrollDistance, 2000);
+    scrollIt(scrollDistance, 2000);
 
     let introObserver = enterView({
         selector: '.header__title, .header__text',

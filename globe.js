@@ -10,7 +10,7 @@
     const colors = {
         'dark': '#000000',
         'light': '#ffffff',
-        'graticule': '#b6b6b6',
+        'graticule': 'rgba(182,182,182,0.6)',
         'main': '#c300ff',
         'mainLight': '#f7acf9',
         'secondaryLight': '#feffe7'

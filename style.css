@@ -67,8 +67,6 @@ em {
     background: linear-gradient(var(--color-light) 25%, var(--color-secondary) 62.5%, var(--color-main) 100%);
     opacity: 0.5;
     z-index: -1;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
 }
 
 .header__background::after {
@@ -130,8 +128,6 @@ header em {
             column-gap: var(--grid-gap);
     position: -webkit-sticky;
     position: sticky;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
     top: 0;
 }
 
@@ -331,8 +327,6 @@ header em {
             column-gap: var(--grid-gap);
     position: -webkit-sticky;
     position: sticky;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
     top: 0;
 }
 

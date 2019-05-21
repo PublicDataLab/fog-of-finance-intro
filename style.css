@@ -426,6 +426,11 @@ header em {
     z-index: -1;
 }
 
+.conclusions p.show--small {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+}
+
 footer {
     background-color: var(--color-dark);
     height: 90px;
@@ -515,6 +520,10 @@ footer polygon {
     .conclusions a {
         font-size: 3.8vw;
     }
+    .conclusions p.show--small {
+        margin: 1.2rem 0 0;
+        font-size: 1.2rem;
+    }
     footer {
         padding: 2rem calc((100% - var(--grid-gap) * (var(--grid-columns) - 1)) / var(--grid-columns) * 2.5) 1rem;
     }
@@ -577,6 +586,9 @@ footer polygon {
     }
     .conclusions a:hover::before {
         opacity: 0.5;
+    }
+    .conclusions p.show--small {
+        display: none;
     }
     footer {
         padding: 2rem calc((100% - var(--grid-gap) * (var(--grid-columns) - 1)) / var(--grid-columns)) 1rem;

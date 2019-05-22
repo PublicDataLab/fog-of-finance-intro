@@ -317,6 +317,7 @@ header em {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    z-index: 2;
 }
 
 .trace__container {
@@ -415,6 +416,7 @@ header em {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    z-index: 2;
 }
 
 

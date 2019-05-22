@@ -276,9 +276,10 @@ header em {
     opacity: 0;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
+    z-index: 2;
 }
 
-.flows__container p {
+.flows__text p {
     margin: 0;
     padding: 0.5rem 0.7rem;
     font-size: 1rem;
@@ -305,6 +306,34 @@ header em {
 .globe__text p.step1.shown,
 .globe__text span.shown {
     opacity: 1;
+}
+
+.flows__trace {
+    grid-row: -2 / span 1;
+    grid-column: 2 / span 9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+
+.trace__container {
+    margin: 0 0.2rem 1rem 0;
+    width: 20px;
+    height: 3px;
+    border: 2px solid var(--color-dark);
+}
+
+.trace {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
 }
 
 .flows__marker,
@@ -375,6 +404,17 @@ header em {
 
 .globe__text em.highlighted {
     color: var(--color-main);
+}
+
+.globe__trace {
+    grid-row: -3 / span 1;
+    grid-column: 2 / span 9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 
@@ -489,10 +529,14 @@ footer polygon {
     .flows__container svg {
         grid-column: 1 / -2;
     }
-    .flows__text {
+    .flows__text,
+    .flows__trace {
         grid-column: 3 / span 5;
     }
-    .flows__container p {
+    .globe__trace {
+        grid-column: 3 / span 6;
+    }
+    .flows__text p {
         font-size: 1.3rem;
     }
     .globe__container h3 {
@@ -560,7 +604,8 @@ footer polygon {
     .flows__container svg {
         grid-column: 3 / -3;
     }
-    .flows__text {
+    .flows__text,
+    .flows__trace {
         grid-column: 2 / span 3;
     }
     .globe__text {
@@ -569,6 +614,9 @@ footer polygon {
     .globe__map {
         grid-row: 1 / -1;
         grid-column: 5 / span 10;
+    }
+    .globe__trace {
+        grid-column: 2 / span 4;
     }
     .conclusions__text {
         grid-column: 2 / span 7;

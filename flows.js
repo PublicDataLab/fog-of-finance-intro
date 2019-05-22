@@ -10,6 +10,11 @@
         exit: function (el) {
             animateFlow(el.id.replace('flow', 'step'), false);
         },
+        progress: function(el, progress) {
+            let id = el.id.replace(/.*(\d)$/, '$1');
+            let $trace = document.querySelector(`.flows__trace .trace__container:nth-child(${id}) .trace`);
+            $trace.style.transform = `scaleX(${progress})`;
+        },
         offset: 0
     });
 

@@ -31,6 +31,11 @@
             exit: function (el) {
                 animateGlobe(el.id.replace('globe', 'step'), false);
             },
+            progress: function(el, progress) {
+                let id = el.id.replace(/.*(\d)$/, '$1');
+                let $trace = document.querySelector(`.globe__trace .trace__container:nth-child(${id}) .trace`);
+                $trace.style.transform = `scaleX(${progress})`;
+            },
             offset: 0
         });
     }).catch(function (error) {

@@ -256,8 +256,17 @@ header em {
     opacity: 0;
 }
 
+.nodes line.line--destination,
+.nodes line.flow--return {
+    stroke: var(--color-main);
+}
+
+.nodes line.line--conduit {
+    stroke: #666666;
+}
+
 .nodes line.flow--return.shown {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .nodes text {
